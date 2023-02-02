@@ -1,13 +1,13 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
@@ -15,12 +15,12 @@ public class SalesManager {
         return max;
     }
 
-    public int stat() {
+    public long stat() {
         if (sales.length != 0) {
-            int st = 0;
-            int max = 0;
-            int min = 0;
-            for (int sale : sales) {
+            long st = 0;
+            long max = 0;
+            long min = 0;
+            for (long sale : sales) {
                 if (sale > max) {
                     max = sale;
                 }
@@ -36,7 +36,7 @@ public class SalesManager {
     }
 
     public static void main(String[] args){
-        int arr[]={10, 12, 15, 42, 1};
+        long arr[]={10, 12, 15, 42, 1};
         SalesManager sm=new SalesManager(arr);
         System.out.println(sm.stat());
     }
